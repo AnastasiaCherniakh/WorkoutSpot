@@ -1,0 +1,28 @@
+@use 'functions' as *;
+@use 'colors' as *;
+
+$font:'Poppins', sans-serif;
+$normal-size: rem(16);
+$mid-size: rem(17);
+
+
+h1, h2, h3 {
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(rem(28), rem(16) + 2vw, rem(40));
+}
+
+h2 {
+    font-size: clamp(rem(22), rem(14) + 1.5vw, rem(36));
+}
+
+p {
+    margin-top: 0;
+    font-size: rem(16);
+}
+
+

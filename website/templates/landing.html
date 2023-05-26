@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+</head>
+
+<body class="landing_body">
+
+    <header class="header_landing">
+        <nav class="container container--plt">
+            <a href="/" class="header_landing__logo">
+                <p>WorkoutSpot</p>
+            </a>
+        </nav>
+        <div class="header_landing__separator"></div>
+    </header>
+    <section class="webapp-title container container--pall">
+        <div class="webapp-title__image"></div>
+        <div class="webapp-title__text">
+            <h1>WorkoutSpot</h1>
+            <p>Live an active lifestyle with WorkoutSpot. We will help you track your fitness training and provide insightful
+            statistics.</p>
+                <a class="webapp-title__btn" href="/sign-up">
+                    <button>Sign up</button>
+                </a>
+            <a href="/login">
+                <button>Login</button>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>

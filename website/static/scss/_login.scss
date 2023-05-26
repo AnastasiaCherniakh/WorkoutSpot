@@ -1,0 +1,82 @@
+.login-body {
+    display: flex;
+    min-height: 90vh;
+}
+
+.login {
+    color: white;
+    background: #136a8a;
+    background:
+        -webkit-linear-gradient(to right, #266f78, #70adc4);
+    background:
+        linear-gradient(to right, #4684a1, #6f95a3);
+    margin: auto;
+    box-shadow:
+        0px 2px 10px rgba(0, 0, 0, 0.2),
+        0px 10px 20px rgba(0, 0, 0, 0.3),
+        0px 30px 60px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 90px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__company {
+            font-size: 45px;
+        }
+    }
+
+    &__msg {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__form input[type=email].text {
+        border: none;
+        background: none;
+        box-shadow: 0px 2px 0px 0px white;
+        width: 100%;
+        color: white;
+        font-size: 1em;
+        outline: none;
+        margin-bottom: 7px;
+    }
+
+    &__form .text::placeholder {
+        color: #D3D3D3;
+    }
+
+    &__form input[type=password].password {
+        border: none;
+        background: none;
+        box-shadow: 0px 2px 0px 0px white;
+        width: 100%;
+        color: white;
+        font-size: 1em;
+        outline: none;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    &__form .password::placeholder {
+        color: #D3D3D3;
+    }
+
+    &__form .login-btn {
+        margin: 30px 45px 0px 65px;
+    }
+
+    &__error {
+        text-align: center;
+        margin-top: 35px;
+        font-weight: 600;
+        background-color: red;
+        padding: 6px;
+        opacity: 0.7;
+        border-radius: 6px;
+    }
+
+}

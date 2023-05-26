@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="container container-all flex flex-jc-sb flex-ai-c">
+    <div class="content-wrap">
+        <h2 class="content-wrap__title">Your trainings💪🏻</h2>
+        <a href="/trainings">
+            <button>Browse trainings</button>
+        </a>
+    </div>
+    <div class="content-wrap">
+        <h2 class="content-wrap__title">Water Intake🥤</h2>
+        <a href="/add-water">
+            <button>Add water</button>
+        </a>
+    </div>
+    <div class="content-wrap">
+        <h2 class="content-wrap__title">Your weight🏋🏻‍♀️</h2>
+        <a href="/update-weight">
+            <button>Update weight</button>
+        </a>
+    </div>
+</section>
+<section class="home container">
+    <div class="home__image"></div>
+    <div class="home__text">
+        <p>Stay Healthy and Fit, Gain More Confidence.</p>
+    </div>
+</section>
+{% endblock %}

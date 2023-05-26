@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+</head>
+<body class="login-body">
+    <section class='login'>
+        <div class='login__head'>
+            <h1 class='login__head__company'>WorkoutSpot</h1>
+        </div>
+        <p class='login__msg'>Welcome back</p>
+        <div class='login__form'>
+            <form method="POST">
+                <input type="email" placeholder='email address' class='text' id='email' name="email" required><br>
+                <input type="password" placeholder='password' class='password' name="password" required><br>
+                <button class="login-btn" type="submit">Login</button>
+            </form>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages%}
+        {% for message in messages%}
+        <div class="login__error">
+            Error: {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
+</body>
+
+</html>

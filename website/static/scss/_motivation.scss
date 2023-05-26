@@ -1,0 +1,31 @@
+.container2 {
+    margin: 80px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-box {
+    border: 2px solid hsl(204, 42%, 20%);
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    color: #444;
+    text-align: center;
+}
+
+.author {
+    float: right;
+    color: #888;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.btn-quote {
+    margin: auto;
+}

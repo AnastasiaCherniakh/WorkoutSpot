@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Add training{% endblock %}
+{% block content %}
+<div class="container container--pall">
+    <section class='add-training flex'>
+        <div class='add-training__head'>
+            <h1 class='add-training__head__company'>Add a training 💪🏻</h1>
+        </div>
+        <div class='add-training__form'>
+            <form method="POST">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="Running">Running</option>
+                    <option value="Yoga">Yoga</option>
+                    <option value="Meditation">Meditation</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="Weights">Weights</option>
+                    <option value="Boxing">Boxing</option>
+                </select><br>
+                <label for="note">Notes:</label>
+                <textarea id="note" name="note" rows="5" cols="33" placeholder="Remember, be nice!"></textarea>
+                <input type="date" name="date" id="date">
+                <button class="login-btn" type="submit">Add training</button>
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock %}

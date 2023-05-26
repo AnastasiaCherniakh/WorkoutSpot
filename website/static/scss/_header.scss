@@ -1,0 +1,53 @@
+@use 'globals' as *;
+
+.header {
+    position: relative;
+    z-index: 1;
+
+    nav {
+        position: relative;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+        background-color: rgb(85, 136, 170, 0.7);
+    }
+
+    &__logo {
+        text-align: center;
+        width: rem(200);
+        height: rem(22);
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    &__links {
+        a {
+            text-decoration: none;
+            color: $black;
+            font-weight: 600;
+            font-size: 19px;
+            transition: color 0.2s ease-in-out;
+
+            &:not(:last-child) {
+                margin-right: 80px;
+            }
+
+            &:hover {
+                color: white;
+                transition-delay: 0.01s;
+            }
+        }
+
+        &__btn-logout:last-of-type {
+            margin-left: auto;
+        }
+    }
+
+    &__separator {
+        color: $black;
+        border-bottom: solid 1px;
+        position: relative;
+        margin: 20px 0px;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
+}
