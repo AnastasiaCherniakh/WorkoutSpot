@@ -30,7 +30,17 @@
         </nav>
     </header>
     <div class="contetnt">
-        <h1 class="container">Water intake a day🥤</h1>
+        <h1 class="container">Your trainings</h1>
+        <div class=" container col-xs-10 col-sm-6 col-md-6">
+            <div class="card card-style mb-2">
+                <div class="card-body">
+                    <div class="chart-container" style="position: relative;">
+                        <canvas id="training"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="container">Water intake this month🥤</h1>
         <div class=" container col-xs-10 col-sm-6 col-md-6">
             <div class="card card-style mb-2">
                 <div class="card-body">
@@ -81,7 +91,45 @@
                         label: "Weight",
                         data: weight,
                         backgroundColor: ['#5DA5DA ', '#FAA43A', '#60BD68',
-                            '#B276B2', '#E16851', '#FB8267'],
+                            '#B276B2', '#E16851', '#FB8280'],
+                        borderWidth: 1,
+                        hoverBorderColor: "black",
+                        hoverBorderWidth: 2,
+                        hoverBackgroundColor: 'rgba(154, 245, 140)',
+                        pointHoverRadius: 5
+                    }],
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Income Categories",
+                        fontSize: 20,
+                    },
+                    legend: {
+                        position: "right",
+                        labels: {
+                            fontColor: "gray"
+                        },
+                        display: true,
+                    },
+
+                    elements: {
+                        hitRadius: 3,
+                    }
+                }
+            })
+
+            let dates3 = JSON.parse({{ dates_label3 | tojson }});
+            let training = JSON.parse({{ training | tojson }});
+            let training_a_day = new Chart(document.getElementById("training"), {
+                type: 'bar',
+                data: {
+                    labels: dates2,
+                    datasets: [{
+                        label: "Trainings",
+                        data: training,
+                        backgroundColor: ['#5DA5DA ', '#FAA43A', '#60BD68',
+                            '#B276B2', '#E16851', '#FB8280'],
                         borderWidth: 1,
                         hoverBorderColor: "black",
                         hoverBorderWidth: 2,

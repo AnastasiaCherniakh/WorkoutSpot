@@ -1,2 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Inspiration{% endblock %}
+{% block content %}
+<div class="hero">
+    <section class="container2 container container-pall">
+        <div class="quote-box">
+            <h1 id="quote" class="quote">Click to get a dose of motivation✨</h1>
+            <small id="author" class="author"></small>
+        </div>
+        <button id="btn" class="btn-quote">Generate quote</button>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+{% endblock %}

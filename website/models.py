@@ -8,6 +8,7 @@ class Training(db.Model):
     category = db.Column(db.String(150), nullable=False)
     date = db.Column(db.DateTime(timezone=True), nullable=False, default=datetime.utcnow)
     note = db.Column(db.String(200))
+    amount = db.Column(db.Integer, default=1)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class WaterIntake(db.Model):

@@ -4,12 +4,12 @@
 <div class="container container--pall">
     <section class='add-training flex'>
         <div class='add-training__head'>
-            <h1 class='add-training__head__company'>Add a training 💪🏻</h1>
+            <h1 class='add-training__head__company'>Add training 💪🏻</h1>
         </div>
         <div class='add-training__form'>
             <form method="POST">
-                <label for="category">Category:</label>
-                <select id="category" name="category">
+                <label class="label_category" for="category">Category:</label>
+                <select class='category' id="category" name="category">
                     <option value="Running">Running</option>
                     <option value="Yoga">Yoga</option>
                     <option value="Meditation">Meditation</option>
@@ -17,11 +17,12 @@
                     <option value="Swimming">Swimming</option>
                     <option value="Weights">Weights</option>
                     <option value="Boxing">Boxing</option>
-                </select><br>
-                <label for="note">Notes:</label>
-                <textarea id="note" name="note" rows="5" cols="33" placeholder="Remember, be nice!"></textarea>
-                <input type="date" name="date" id="date">
-                <button class="login-btn" type="submit">Add training</button>
+                </select><br><br>
+                <label class="label_notes" for="note">Your notes</label>
+                <textarea class="note" id="note" name="note" rows="5" cols="33" placeholder="Share your thoughts about the training!"></textarea><br><br>
+                <label class="label_category" for="date">Date:</label>
+                <input class="date" type="date" name="date" id="date"><br/>
+                <button class="add-btn" type="submit">Add training</button>
             </form>
         </div>
     </section>

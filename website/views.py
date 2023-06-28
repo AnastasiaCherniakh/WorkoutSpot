@@ -63,7 +63,11 @@ def trainings():
 @views.route('/stats')
 def stats():
     cup_a_day = db.session.query(db.func.sum(WaterIntake.cup), WaterIntake.date).group_by(WaterIntake.date).order_by(WaterIntake.date).all()
+
     weight_a_date = db.session.query(db.func.sum(Weight.weight), Weight.date).group_by(Weight.date).order_by(Weight.date).all()
+
+    training_a_date = db.session.query(db.func.sum(Training.amount), Training.category).group_by(
+        Training.category).order_by(Training.category).all()
 
     cups = []
     dates_label = []
@@ -74,10 +78,15 @@ def stats():
     weights = []
     dates_label2 = []
     for weight, date in weight_a_date:
-        dates_label.append(date.strftime("%d-%m-%Y"))
+        dates_label2.append(date.strftime("%d-%m-%Y"))
         weights.append(weight)
-    return render_template('stats.html', cups=json.dumps(cups), dates_label=json.dumps(dates_label), dates_label2=json.dumps(dates_label2), weight=json.dumps(weights))
 
+    trainings = []
+    dates_label3 = []
+    for training, category in training_a_date:
+        dates_label3.append(category)
+        trainings.append(training)
+    return render_template('stats.html', cups=json.dumps(cups), dates_label=json.dumps(dates_label), dates_label2=json.dumps(dates_label2), weight=json.dumps(weights), dates_label3=json.dumps(dates_label3), training=json.dumps(trainings))
 @views.route('/inspiration')
 def inspiration():
     return render_template('inspiration.html')

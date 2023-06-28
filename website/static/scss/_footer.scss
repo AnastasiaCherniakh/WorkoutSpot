@@ -1,0 +1,20 @@
+@use 'globals' as *;
+
+footer {
+    padding: 290px 0 0 20px;
+}
+
+footer .social-links a {
+    margin-left: 20px;
+    padding: 16px 22px;
+    color: rgb(85, 136, 170);
+    background-color: white;
+    font-size: 33px;
+    border-radius: 50%;
+    transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+    color: white;
+    background-color: rgb(85, 136, 170);
+}

@@ -35,6 +35,11 @@
                 color: white;
                 transition-delay: 0.01s;
             }
+
+            &.link.active {
+                color: white;
+                transition-delay: 0.01s;
+            }
         }
 
         &__btn-logout:last-of-type {
