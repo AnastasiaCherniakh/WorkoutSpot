@@ -30,7 +30,7 @@
         </nav>
     </header>
     <div class="contetnt">
-        <h1 class="container">Your trainings</h1>
+        <h1 class="container">Your trainings this month</h1>
         <div class=" container col-xs-10 col-sm-6 col-md-6">
             <div class="card card-style mb-2">
                 <div class="card-body">
@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        <br />
         <h1 class="container">Water intake this month🥤</h1>
         <div class=" container col-xs-10 col-sm-6 col-md-6">
             <div class="card card-style mb-2">
@@ -50,7 +51,8 @@
                 </div>
             </div>
         </div>
-        <h1 class="container">Weight</h1>
+        <br />
+        <h1 class="container">Your weight</h1>
         <div class=" container col-xs-10 col-sm-6 col-md-6">
             <div class="card card-style mb-2">
                 <div class="card-body">
@@ -61,6 +63,7 @@
             </div>
         </div>
     </div>
+    <br />
     {% block javascript %}
     <script>
         let dates = JSON.parse({{ dates_label | tojson }});
@@ -79,7 +82,16 @@
                         lineTension: 0.1
                     }]
                 },
-                options: {}
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
             });
         let dates2 = JSON.parse({{ dates_label2 | tojson }});
         let weight = JSON.parse({{ weight | tojson }});
@@ -124,17 +136,18 @@
             let training_a_day = new Chart(document.getElementById("training"), {
                 type: 'bar',
                 data: {
-                    labels: dates2,
+                    labels: dates3,
                     datasets: [{
-                        label: "Trainings",
+                        label: 'Trainings',
                         data: training,
-                        backgroundColor: ['#5DA5DA ', '#FAA43A', '#60BD68',
-                            '#B276B2', '#E16851', '#FB8280'],
+                        backgroundColor:
+                            ["#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"],
                         borderWidth: 1,
                         hoverBorderColor: "black",
                         hoverBorderWidth: 2,
                         hoverBackgroundColor: 'rgba(154, 245, 140)',
                         pointHoverRadius: 5
+
                     }],
                 },
                 options: {
@@ -153,6 +166,15 @@
 
                     elements: {
                         hitRadius: 3,
+                    },
+
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
                     }
                 }
             })
